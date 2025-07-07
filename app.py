@@ -30,8 +30,8 @@ def submit():
     email = EmailMessage()
     email['Subject'] = f"New message from {name}"
     email['From'] = os.environ.get("shoryagupta016@gmail.com")
-    email['To'] = os.environ.get("shoryagupta006@gmail.com")
-    email.set_content(message)
+    email['To'] = os.environ.get("shoryagupta016@gmail.com")
+    email.set_content(f"Name: {name}\n\nMessage:\n{message}")
 
     # 📤 Send email via Gmail SMTP
     try:
