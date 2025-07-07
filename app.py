@@ -36,7 +36,7 @@ def submit():
     # 📤 Send email via Gmail SMTP
     try:
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login(os.environ.get("shoryagupta016@gmail.com"), os.environ.get("nrttpnsqfpbbvhbo"))
+            smtp.login(os.environ.get("shoryagupta016@gmail.com"), os.environ.get("htewksapjdxuwjog"))
             smtp.send_message(email)
         return render_template("thanks.html", name=name)
     except Exception as e:
