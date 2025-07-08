@@ -4,7 +4,7 @@ import smtplib
 from email.message import EmailMessage
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY", "super_secret_key_123")
+app.secret_key = 'your_secret_key_here'  # needed for flash messages
 
 @app.route('/')
 def home():
@@ -17,6 +17,14 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template("contact.html")
+
+@app.route('/projects')
+def projects():
+    projects_data = [
+        {"title": "AI Art Generator", "description": "Built with Python, OpenCV, and Flask.", "image": "project1.jpg"},
+        {"title": "Tourism Blog", "description": "Travel blog using Flask and Bootstrap.", "image": "project2.jpg"},
+    ]
+    return render_template("projects.html", projects=projects_data)
 
 @app.route('/submit', methods=["POST"])
 def submit():
@@ -35,7 +43,7 @@ def submit():
             smtp.send_message(email)
         flash("✅ Message sent successfully!", "success")
     except Exception as e:
-        flash(f"❌ Failed to send message: {str(e)}", "error")
+        flash(f"❌ Error sending email: {str(e)}", "error")
 
     return redirect(url_for('contact'))
 
