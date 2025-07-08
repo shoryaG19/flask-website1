@@ -1,22 +1,28 @@
-/* General Styles */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
 body {
     background-color: #121212;
     color: #f1f1f1;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-/* Navbar Styles */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    background-color: #1f1f1f;
-    border-bottom: 2px solid cyan;
     flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid cyan;
 }
 
 .navbar a {
@@ -31,94 +37,101 @@ body {
     color: white;
 }
 
-/* Container */
+/* Containers */
 .container {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
+    padding: 30px 10px;
+    text-align: center;
 }
 
-/* Flash Messages */
-.flash.success {
-    color: lightgreen;
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Flash messages */
+.flash {
+    margin: 15px auto;
+    padding: 12px;
+    max-width: 600px;
+    border-radius: 6px;
     font-weight: bold;
-    margin: 20px auto;
+    text-align: center;
+}
+
+.flash.success {
+    background-color: #28a745;
+    color: #fff;
 }
 
 .flash.danger {
-    color: red;
-    font-weight: bold;
-    margin: 20px auto;
+    background-color: #dc3545;
+    color: #fff;
 }
 
-/* Buttons */
-button {
-    padding: 10px 20px;
-    background-color: cyan;
-    color: #121212;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ffff22;
 }
 
-button:hover {
-    background-color: #00ffff;
-}
-
-/* Form Fields */
-input[type="text"], textarea {
+form input,
+form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border: 2px solid #444;
-    border-radius: 5px;
-    background-color: #1f1f1f;
-    color: white;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
     font-size: 16px;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .container {
-        padding: 20px;
-    }
+form button {
+    padding: 10px 20px;
+    background-color: cyan;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #121212;
 }
-@media screen and (max-width: 600px) {
+
+form button:hover {
+    background-color: #00ffff;
+}
+
+/* Projects List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 10px;
         align-items: center;
     }
 
-    .container {
-        padding: 20px;
-        text-align: center;
-    }
-
-    body {
-        font-size: 16px;
-        padding: 10px;
-    }
-
     h1 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
-    p {
-        font-size: 16px;
+    .container {
+        padding: 20px 5px;
     }
 
-    input, textarea, button {
-        width: 100%;
-        max-width: 100%;
-        font-size: 16px;
+    form {
+        padding: 15px;
     }
 }
-
