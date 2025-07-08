@@ -1,28 +1,24 @@
-/* General Reset */
-* {
+/* ====== Global Styles ====== */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
-body {
+    font-family: 'Segoe UI', sans-serif;
     background-color: #121212;
     color: #f1f1f1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 20px;
     line-height: 1.6;
 }
 
-/* Navbar */
+/* ====== Navbar ====== */
 .navbar {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     padding: 15px;
-    background-color: #1e1e1e;
+    background-color: #1f1f1f;
     border-bottom: 2px solid cyan;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar a {
@@ -30,108 +26,156 @@ body {
     color: cyan;
     font-weight: bold;
     font-size: 18px;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
     color: white;
 }
 
-/* Containers */
-.container {
-    padding: 30px 10px;
+/* ====== Hero Section ====== */
+.hero {
     text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Headings */
-h1 {
-    font-size: 2rem;
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-/* Flash messages */
-.flash {
-    margin: 15px auto;
-    padding: 12px;
-    max-width: 600px;
-    border-radius: 6px;
+.cta-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: cyan;
+    color: black;
     font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: white;
+}
+
+/* ====== Projects Section ====== */
+.projects-section {
+    padding: 40px 20px;
     text-align: center;
 }
 
-.flash.success {
-    background-color: #28a745;
-    color: #fff;
+.projects-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-.flash.danger {
-    background-color: #dc3545;
-    color: #fff;
+.project-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 30px;
 }
 
-/* Form Styles */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background: #1f1f1f;
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #00ffff22;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-form input,
-form textarea {
-    width: 100%;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: cyan;
+}
+
+/* ====== Flash Messages ====== */
+.flash {
     padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #444;
-    border-radius: 4px;
-    background-color: #222;
-    color: #fff;
-    font-size: 16px;
+    margin: 20px auto;
+    max-width: 90%;
+    text-align: center;
+    border-radius: 5px;
 }
 
-form button {
-    padding: 10px 20px;
+.flash-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.flash-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* ====== Forms & Input ====== */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid cyan;
+}
+
+button {
+    padding: 10px;
     background-color: cyan;
-    border: none;
-    border-radius: 4px;
+    color: black;
     font-weight: bold;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    color: #121212;
+    transition: 0.3s;
 }
 
-form button:hover {
-    background-color: #00ffff;
+button:hover {
+    background-color: white;
 }
 
-/* Projects List */
-ul {
-    list-style: none;
-    padding: 0;
+/* ====== Container for About, Contact, etc. ====== */
+.container {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-ul li {
-    font-size: 1.1rem;
-    margin: 10px 0;
-}
-
-/* Responsive Design */
+/* ====== Responsive Design ====== */
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
     .navbar {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .container {
-        padding: 20px 5px;
-    }
-
-    form {
-        padding: 15px;
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
