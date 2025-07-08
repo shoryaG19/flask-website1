@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Thank You | Shorya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
+    <!-- Navbar -->
     <nav class="navbar">
-        <a href="/">🏠 Home</a>
-        <a href="/about">ℹ️ About</a>
-        <a href="/contact">📞 Contact</a>
-        <a href="/projects">💼 Projects</a>
+        <a href="{{ url_for('home') }}">🏠 Home</a>
+        <a href="{{ url_for('about') }}">ℹ️ About</a>
+        <a href="{{ url_for('contact') }}">📞 Contact</a>
+        <a href="{{ url_for('projects') }}">💼 Projects</a>
     </nav>
 
-    <hr>
+    <!-- Thank You Message -->
+    <div class="container" style="padding: 50px; text-align: center;">
+        <h1>Thank You {{ name }}! 🙏</h1>
+        <p>Your message has been received. I’ll get back to you soon.</p>
+    </div>
 
-    <h1>Thank You {{ name }}! 🙏</h1>
-    <p>Your message has been received. I’ll get back to you soon.</p>
 </body>
 </html>
