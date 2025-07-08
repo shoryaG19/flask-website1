@@ -1,0 +1,20 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #121212;
+    border-bottom: 2px solid cyan;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: cyan;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: white;
+}
