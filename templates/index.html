@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
-    <!-- Navbar -->
     <nav class="navbar">
         <a href="{{ url_for('home') }}">🏠 Home</a>
         <a href="{{ url_for('about') }}">ℹ️ About</a>
@@ -16,11 +14,28 @@
         <a href="{{ url_for('projects') }}">💼 Projects</a>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container" style="padding: 50px; text-align: center;">
-        <h1>Welcome to My Flask Website! 🚀</h1>
-        <p>This is the homepage of my portfolio site built using Flask.</p>
-    </div>
+    <header class="hero">
+        <h1>Hey, I'm Shorya 👋</h1>
+        <p>A passionate BBA Travel & Tourism student creating with Python & Flask!</p>
+        <a href="#projects" class="cta-btn">Explore Projects ↓</a>
+    </header>
 
+    <section id="projects" class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>🌐 Flask Portfolio</h3>
+                <p>My personal website built with Flask, deployed on Render.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 AI Art Generator</h3>
+                <p>Generates live webcam-based AI art in real-time using PyTorch & OpenCV.</p>
+            </div>
+            <div class="card">
+                <h3>🎮 Snake Game</h3>
+                <p>Classic snake game made with Pygame, fully responsive and fun.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
