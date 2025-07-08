@@ -4,54 +4,12 @@
     <meta charset="UTF-8">
     <title>Projects | Shorya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <style>
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 40px 20px;
-        }
 
-        .project-card {
-            background-color: #1f1f1f;
-            border: 2px solid cyan;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-
-        .project-card h3 {
-            color: cyan;
-        }
-
-        .project-card p {
-            color: #ddd;
-        }
-
-        .project-card a {
-            color: #0dcaf0;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-    </style>
+    <!-- Animate.css for smooth entry -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
 
@@ -63,41 +21,15 @@
         <a href="{{ url_for('projects') }}">💼 Projects</a>
     </nav>
 
-    <!-- Page Content -->
-    <div class="container">
-        <h1 style="text-align:center;">🚀 My Projects</h1>
-
-        <div class="projects-container">
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x150.png?text=Flask+Website" alt="Flask Website">
-                <h3>🌐 Flask Portfolio</h3>
-                <p>My personal portfolio built using Flask, HTML, and CSS.</p>
-                <a href="https://github.com/shoryaG19/flask-website1" target="_blank">View Code</a>
-            </div>
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x150.png?text=AI+Art+Generator" alt="AI Art Generator">
-                <h3>🧠 AI Art Generator</h3>
-                <p>Real-time art creation using webcam + AI with OpenCV & PyTorch.</p>
-                <a href="#">Coming Soon</a>
-            </div>
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x150.png?text=Snake+Game" alt="Snake Game">
-                <h3>🎮 Snake Game</h3>
-                <p>A fun retro game built using Python & Pygame.</p>
-                <a href="#">Coming Soon</a>
-            </div>
-
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x150.png?text=Face+Detection" alt="Face Detection">
-                <h3>🔍 Face Detection</h3>
-                <p>Face tracking using OpenCV & Haar cascades in real-time.</p>
-                <a href="#">Coming Soon</a>
-            </div>
-
-        </div>
+    <!-- Project Section -->
+    <div class="container" style="padding: 50px; text-align: center;">
+        <h1 class="animate__animated animate__fadeInDown">My Projects 💡</h1>
+        <ul style="list-style: none; padding: 0;">
+            <li class="animate__animated animate__zoomIn">🌐 Flask Portfolio Website</li>
+            <li class="animate__animated animate__zoomIn animate__delay-1s">🧠 AI Art Generator</li>
+            <li class="animate__animated animate__zoomIn animate__delay-2s">🎮 Snake Game in Python</li>
+            <li class="animate__animated animate__zoomIn animate__delay-3s">🔍 Real-time Face Detection</li>
+        </ul>
     </div>
 
 </body>
