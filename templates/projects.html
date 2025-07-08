@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Projects | Shorya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
+    <!-- Navbar -->
     <nav class="navbar">
-        <a href="/">🏠 Home</a>
-        <a href="/about">ℹ️ About</a>
-        <a href="/contact">📞 Contact</a>
-        <a href="/projects">💼 Projects</a>
+        <a href="{{ url_for('home') }}">🏠 Home</a>
+        <a href="{{ url_for('about') }}">ℹ️ About</a>
+        <a href="{{ url_for('contact') }}">📞 Contact</a>
+        <a href="{{ url_for('projects') }}">💼 Projects</a>
     </nav>
 
-    <hr>
+    <!-- Page Content -->
+    <div class="container" style="padding: 50px; text-align: center;">
+        <h1>My Projects</h1>
+        <ul style="list-style: none; padding: 0;">
+            <li>🌐 Flask Portfolio Website</li>
+            <li>🧠 AI Art Generator</li>
+            <li>🎮 Snake Game in Python</li>
+            <li>🔍 Real-time Face Detection</li>
+        </ul>
+    </div>
 
-    <h1>My Projects</h1>
-    <ul>
-        <li>🌐 Flask Portfolio Website</li>
-        <li>🧠 AI Art Generator</li>
-        <li>🎮 Snake Game in Python</li>
-        <li>🔍 Real-time Face Detection</li>
-    </ul>
 </body>
 </html>
