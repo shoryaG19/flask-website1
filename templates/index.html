@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Home | Shorya</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <title>Home | Shorya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="{{ url_for('home') }}">🏠 Home</a>
-        <a href="{{ url_for('about') }}">ℹ️ About</a>
-        <a href="{{ url_for('contact') }}">📞 Contact</a>
-        <a href="{{ url_for('projects') }}">💼 Projects</a>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}">🏠 Home</a>
+    <a href="{{ url_for('about') }}">ℹ️ About</a>
+    <a href="{{ url_for('contact') }}">📞 Contact</a>
+    <a href="{{ url_for('projects') }}">💼 Projects</a>
+  </nav>
 
-    <header class="hero">
-        <h1>Hey, I'm Shorya 👋</h1>
-        <p>A passionate BBA Travel & Tourism student creating with Python & Flask!</p>
-        <a href="#projects" class="cta-btn">Explore Projects ↓</a>
-    </header>
-
-    <section id="projects" class="projects-section">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="card">
-                <h3>🌐 Flask Portfolio</h3>
-                <p>My personal website built with Flask, deployed on Render.</p>
-            </div>
-            <div class="card">
-                <h3>🎨 AI Art Generator</h3>
-                <p>Generates live webcam-based AI art in real-time using PyTorch & OpenCV.</p>
-            </div>
-            <div class="card">
-                <h3>🎮 Snake Game</h3>
-                <p>Classic snake game made with Pygame, fully responsive and fun.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hey, I'm <span class="highlight">Shorya</span> 👋</h1>
+    <p>A passionate shudent creating with <strong>Python & Flask</strong>!</p>
+  </section>
 </body>
 </html>
